@@ -1,0 +1,70 @@
+<!--pages/product_details/product_details.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class='container'>
+<!--顶部通用块  -->
+  <view class='nav bg-white' >
+    <image src='../assets/tabs/left_icon.png' mode='aspectFit' bindtap='jumpBack'></image>
+    <view class='nav-title'>商品详情</view> 
+  </view> 
+  <!--商品详情  -->
+  <view>
+    <!--商品图片  -->
+    <view class='header'>
+      <image src='{{detailsList[0].img_url}}' lazy-load='true' mode='scaleToFill'></image>
+    </view>
+    <!--商品详细信息  -->
+    <view class='main'>
+      <view class='row'>
+        <ul class='col'>
+          <li class='title col-4'>{{detailsList[0].title}}</li>
+        </ul>
+      </view>
+      <view class='row'>
+        <ul class='col'>
+         <!-- <li class='price col-4' style='color:red;font-size:20px'>￥{{filter.moneyFormat(100)}}</li> -->
+         <li class='price col-4' style='color:red;font-size:20px'>￥{{detailsList[0].price}}</li>
+          <!-- <li class='price col-4' style='color:red;font-size:20px'>￥{{filter.moneyFormat(detailsList[0].price)}}</li> -->
+          <li class='col-3'>原价：<text style='text-decoration:line-through;'>0.00</text></li>
+        </ul>
+      </view>
+      <view class='row'>
+        <ul class='col'>
+          <li class='col-4'>剩余：998</li>
+          <li class='col-4'>销量：{{detailsList[0].saleNumber}}笔</li>
+          <li class='col-4'>快递包邮</li>
+        </ul>
+      </view>
+    </view>
+      <!--分割快  -->
+      <view class='deep'></view>
+      <!--商品评价  -->
+      <view class='hProduct'>商品评价（0）</view>
+      <!--分割快  -->
+      <view class='deep'></view>
+      <!--商品详情  -->
+      <view class='hProduct'>商品详情</view>
+  </view>
+  <!--底部样式  -->
+    <view class='footer'>
+      <!-- 白色分割快 -->
+      <view class='divider'></view>
+      <view class='row '>
+        <ul class='col x-center'>
+          <li class='col-2'>
+            <image src='../assets/tabs/message.png' ></image>
+            <view>客服</view>
+          </li>
+          <li class='col-2' bindtap='jumpCart'>
+            <image src='../assets/tabs/shop_cart.png'></image>
+            <view>购物车</view>
+          </li>
+          <li class='col-2' bindtap='jumpIndex'>
+              <image src='../assets/tabs/shop.png'></image>
+              <view>店铺</view>
+          </li>
+          <li class='col-4'><navigator  class='addBtn'>加入购物车</navigator></li>
+          <li class='col-4'><navigator class='buyBtn'>立刻购买</navigator></li>
+        </ul>
+      </view>
+    </view>
+</view>

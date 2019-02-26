@@ -1,0 +1,185 @@
+/**index.wxss**/
+
+
+page{
+    font-size: 13px;
+}
+.container,.container swiper,.pic{
+width: 100%;
+height:390rpx;
+}
+
+/* 3张图 */
+.index_container li{
+  width: 280rpx;
+  height: 260rpx;
+}
+.index_container li navigator image{
+  height:250rpx;
+}
+/* 商品模块 */
+.bg{
+  background-color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  width:100%;
+  height: 80rpx;
+}
+/* 通用箭头 */
+.arrow::after{
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  margin-right: 20rpx;
+  border-right:3px solid #ddd;
+  border-top:3px solid #ddd;
+  transform: rotate(45deg)
+}
+/* 海鲜商品 */
+.products{
+  background-color: #eee;  
+}
+.index_products{
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10rpx;
+}
+
+.index_products li{
+  margin:5rpx;
+  width: 47%;
+  height: 300rpx;
+  background-color: #fff;
+  border:1rpx solid #ddd;
+  padding-bottom: 20rpx;
+}
+.index_products .productDetails{
+  height: 100%;
+}
+.index_products li view{
+  margin:5rpx 10rpx;
+}
+.index_products li view image{
+  width: 100%;height:70%;
+}
+.index_products li .rFloat{
+  width: 40rpx;
+  height:40rpx;
+  float:right;
+  margin-top: -40rpx;
+  margin-right: 20rpx;
+}
+.footer{
+  text-align:center;
+  line-height: 100rpx;
+  color:rgb(153, 149, 149);
+  width: 100%;
+  height:100rpx;
+  background-color: #fff;
+}
+
+/*--屏幕背景变暗的背景 */
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+   overflow: hidden; 
+  z-index: 10;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  width: 100%;
+   /* overflow: hidden;  */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  background: #fff;
+  padding-top: 20rpx;
+}
+/*弹出框第一栏  */
+.cart-product{
+  position: relative;
+  border-bottom: 1rpx solid #ddd;
+  padding-bottom: 10rpx;
+  width: 100%;
+  height: 110rpx;
+}
+/*图片  */
+.cart-img {
+  width: 150rpx;
+  height: 150rpx; 
+  position: absolute;
+  top:-46rpx;
+  left:15rpx;
+  border: 1rpx solid seashell;
+}
+.cart-img image{
+  width: 98%;
+  height: 98%;
+}
+/*商品介绍  */
+.cart-detail{
+  margin-left: 170rpx;
+}
+.cart-detail view{
+  margin: 10rpx;
+}
+/*关闭按钮  */
+.cart-product icon{
+  position: absolute;
+  right: 10rpx;
+  top:0rpx;
+}
+/*购买数量  */
+.cart-count{
+  display: flex;
+  width:100%;
+  height:100rpx;
+  line-height: 100rpx;
+  padding-left: 15rpx;
+}
+.cart-count view:first-child{
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.cart-count view .cart-buy{
+  border: none;
+  width: 140rpx;
+}
+.cart-count view text{
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border: 1rpx solid #ddd;
+}
+.cart-count view:last-child{
+  width: 30%;
+  text-align: right;
+}
+/*按钮  */
+.btn{
+  display: flex;
+  width: 100%;
+}
+.addBtn,.buyBtn{
+  color: #fff;
+  text-align: center;
+  padding: 20rpx 0; 
+  font-size: 15px;
+  width: 50%;
+}
+.addBtn{
+   background-color: #f60;
+}
+.buyBtn{
+  background-color: #f00;
+}

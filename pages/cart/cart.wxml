@@ -1,0 +1,75 @@
+<!--pages/cart/cart.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view>
+  <!--公共头  -->
+  <view class='nav bg-white' bindtap='jumpBack'>
+      <image  src='../assets/tabs/left_icon.png' mode='aspectFit' bindtap='navBack'></image>
+      <view class='nav-title'>购物车</view> 
+  </view>
+  <!-- 正文 -->
+  <view class='cart-box'>
+    <!--如果列表为空，显示空页面  -->
+    <view wx:if='{{carts.length==0}}' class='cart-none'>
+      <view class='shop-cart'>
+      <image src='../assets/tabs/cart_none.png'></image>
+      </view>
+      <view class='none-content'>
+        <view>您的购物车空空如也</view>
+        <view>去挑几件中意的商品吧</view>
+      </view>
+      <button size='mini' type='warn' bindtap='jumpBack'>去逛一下吧!</button>
+      <view class='paoluo'>
+      泡螺提供技术支持
+      </view>
+    </view>
+    <view wx:else>
+      <!-- wx:for 渲染购物车列表 -->
+      <view  class='cart-list' wx:for='{{carts}}' wx:key='{{index}}'  >
+          <view class='cart-icon'>
+          <!-- wx:if 是否选择显示不同图标 -->
+            <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="selectList" data-index='{{index}}' />
+            <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}"/>
+          </view>
+          <view class='cart_container' data-pid='{{item.pid}}'  bindtap='jumpDetails'>
+            <view class='cart-img'>
+                  <image class="cart-thumb" src="{{item.cimg_url}}"></image>
+            </view>
+            <view class='cart-content'>
+              <text>{{item.ctitle}}</text>
+              <text style='color:red'>￥{{item.cprice}}</text>
+            </view>
+          </view>
+          <!--加减按钮  -->
+          <view class='cart-btn'>
+            <text bindtap="minusCount" data-index="{{index}}">-</text>
+            <text>{{item.countNumber}}</text>
+            <text bindtap="addCount" data-index="{{index}}">+</text>
+          </view>
+          <!--分割快  -->
+          <view class='divider'></view>
+      </view>
+      <view class='paoluo'>
+        泡螺提供技术支持
+      </view>
+    </view>
+    <!--底部删除、合计、结算  -->
+    <view class='cart-footer'>
+    <!--是否全选  -->
+      <view class='selectAll'>
+        <icon wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll"/>
+        <icon wx:else type="circle" bindtap="selectAll"/>
+      </view>
+      <view>全选</view>
+      <!-- 删除 -->
+      <view class='cart-del' bindtap='deleteCart'>
+        <image src='../assets/tabs/delete.png'></image>
+        <!-- success, success_no_circle, info, warn, waiting, cancel, download, search, clear -->
+      </view>
+      <!--合计  -->
+      <view class='totalPrice'>合计<text>￥{{filter.moneyFormat(totalPrice)}}</text></view>
+      <!--结算  -->
+      <button class='btn' wx:if='{{orderCarts.length==0}}' size='mini'  disabled='true'>结算</button>
+      <button class='btn' wx:else type='warn' size='mini' bindtap='pay'>结算 ({{orderCarts.length}})</button>
+    </view>
+  </view>
+</view>

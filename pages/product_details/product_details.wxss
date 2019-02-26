@@ -1,0 +1,51 @@
+/* pages/product_details/product_details.wxss */
+.container{
+  font-size: 14px;
+}
+/*商品图片  */
+.header image{
+  width: 100%;
+}
+.main{
+  padding:0rpx 0rpx 20rpx 40rpx;
+}
+.main view{
+  margin: 20rpx 0rpx;
+}
+/*商品详情和评价  */
+.hProduct{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 40rpx;
+}
+
+/*底部样式  */
+.footer{
+  padding-top:200rpx;
+  background-color: #f8f8f8;
+}
+.footer view.row{
+  border-top:1rpx solid #eee;
+}
+.footer ul li{
+  text-align: center;
+    font-size: 12px;
+}
+.footer ul li image{
+  margin-top:15rpx;
+  margin-bottom:-5rpx;
+  width:40rpx;
+  height:40rpx;
+}
+.addBtn,.buyBtn{
+  color: #fff;
+  text-align: center;
+  padding: 30rpx 0; 
+  font-size: 15px;
+}
+.addBtn{
+  background-color: #f60;
+}
+.buyBtn{
+  background-color: #f00;
+}

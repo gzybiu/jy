@@ -1,0 +1,29 @@
+/* pages/products/seller/seller.wxss */
+/* 项目条目 */
+.cell{
+  font-size: 12px;
+  background-color: #f8f8f8;
+  margin-top: 15rpx;
+}
+.cell image{
+  width:30rpx;
+  height:30rpx;
+}
+.cell-item{
+  padding: 15rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  display: flex;
+}
+.cell-view{
+  width: 80rpx;
+  padding-top: 10rpx; 
+}
+.cell-right{
+  position: fixed;
+  right:20rpx;
+}
+.footer{
+  height:1000rpx;
+  text-align: center;
+}

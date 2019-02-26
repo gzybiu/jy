@@ -1,0 +1,16 @@
+<!--pages/products/product/product.wxml-->
+<view class='parentContainer'>
+
+    <view class='tab-wrapper'>
+      <view id='tableft' class='tab-top {{currentTab === 0 ? "tab-active":""}}' bindtap='switchTab'>全部</view>
+      <view id='tabmid' class='tab-middle {{currentTab === 2 ? "tab-active" : ""}}' bindtap='switchTab'>海鲜</view>
+      <view id='tabright' class='tab-bottom {{currentTab === 4 ? "tab-active" : ""}}' bindtap='switchTab'>简餐</view>
+      <view class='tabbottom'></view>
+    </view>
+    <view class='content-container'>
+      <view class='content-wrapper' wx:if='{{currentTab === 0}}'><all id="all"></all></view>
+      <view  class='content-wrapper' wx:if='{{currentTab === 2}}'><haixian id="hai"></haixian></view>
+      <view class='content-wrapper' wx:if='{{currentTab === 4}}'><jiancan id="jian"></jiancan></view>
+    </view>
+</view>
+

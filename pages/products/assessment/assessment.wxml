@@ -1,0 +1,28 @@
+<!--pages/products/assessment/assessment.wxml-->
+<wxs src="../../../utils/filter.wxs" module="filter" />
+<view class='parent'>
+  <!--头像，用户名，评分，日期  -->
+  <view class='list_container' wx:for='{{list}}' wx:key="index">
+    <!--左侧头像  -->
+    <ul class='flex_contaier'>
+      <li><image class='user_img' src='{{item.user_img}}' lazy-load='true'></image></li>
+      <li>
+        <p>{{item.uname}}</p>
+        <view class='shop-star'>
+          <view class='star-after' style='width:{{item.score}}%'>★★★★★</view>
+           <view class='star-before' >★★★★★</view> 
+        </view>
+      </li>
+      <li><text>{{filter.dataFormat(item.utime)}}</text></li>
+    </ul>
+    <!--评论内容  -->
+    <view class='content'>
+      <view class='content_details'>{{item.content}}</view>
+      <ul class='content_flex'>
+        <li>
+         <image id='small' src='{{item.contentPic}}' lazy-load='true'></image>
+        </li>
+      </ul>
+    </view>
+  </view>
+</view>

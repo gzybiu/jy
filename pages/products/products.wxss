@@ -1,0 +1,40 @@
+/* pages/products/products.wxss */
+.products_title{
+  width:100%;
+
+}
+.products_title image{
+  width:100%;
+  height:200rpx;
+}
+/* 商品、评价、商家 内容样式*/
+.tab-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+}
+
+.tab-left, .tab-right,.tab-middle{
+  flex: 1;
+  font-size: 32rpx;
+  color: #000;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.tab-active{
+  color:#f00;
+  border-bottom: 6rpx solid #f00;
+}
+
+.content-container{
+  padding-top:10rpx;
+}
+
+.content-wrapper{
+  width: 100%;
+  flex: 1;
+}

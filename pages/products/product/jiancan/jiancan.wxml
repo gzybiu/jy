@@ -1,0 +1,24 @@
+<!--pages/products/product/jiancan/jiancan.wxml-->
+<!--pages/products/product/haixian/haixian.wxml-->
+<wxs src="../../../../utils/filter.wxs" module="filter" />
+<view class='all'>
+  <view class='s_header'><text>|</text>简餐</view>
+    <ul class='all_product' wx:for='{{list}}' wx:key='{{index}}' data-pid='{{item.pid}}'  bindtap='jumpDetails'>
+      <li>
+        <image src='{{item.img_url}}'></image>
+      </li>
+      <li>
+        <view class='title'>{{item.title}}</view>
+        <view class='detail'>{{item.detail}}</view>
+        <view class='price'>￥{{filter.moneyFormat( item.price)}}</view>
+        <view class='num'>销量：{{item.saleNumber}}笔</view>
+        <view class='function'>
+          <text>自取</text>
+          <text>外卖</text>
+          <view>
+            <image src='../../../assets/add.png' lazy-load='true'></image>
+        </view>
+        </view>
+      </li>
+    </ul>
+</view>
