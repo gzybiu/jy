@@ -1,0 +1,43 @@
+<!--pages/search/search.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view>
+  <!--商品搜索列表  -->
+  <view class='nav bg-white' >
+    <image src='../assets/tabs/left_icon.png' mode='aspectFit' bindtap='jumpBack'></image>
+    <view class='nav-title'>商品搜索列表</view> 
+  </view>  
+  <!--导航搜索框  -->
+  <form bindsubmit='getSearchWords'>
+    <view class='search_container'>
+      <view class='search'>
+        <icon type='search'></icon>
+        <input class='searchInsert' type='text' placeholder='请输入商品名称' name='swords' value='{{swords}}'/>
+      </view>
+        <button form-type='submit' class='searchBtn' bindtap='jumpSearch'>搜索</button> 
+    </view>
+  </form>
+<!--  排序 综合 销量 价格 上新时间  -->
+  <!--商品表  -->
+  <view>
+    <view class='noProducts' wx:if='{{keyList.length==0}}'>
+      <text>暂时没有商品记录</text>
+      <view>泡螺提供技术支持</view>
+    </view>
+    <view wx:else>
+      <ul class='all_product' wx:for='{{keyList}}' wx:key='{{index}}' data-pid='{{item.pid}}'  bindtap='jumpDetails'>
+        <li>
+          <image src='{{item.img_url}}'></image>
+        </li>
+        <li>
+          <view class='title'>{{item.title}}</view>
+          <view class='detail'>{{item.detail}}</view>
+          <view class='price'>￥{{filter.moneyFormat( item.price)}}</view>
+          <view class='num'>销量：{{item.saleNumber}}笔</view>
+          <view class='function'>
+              <image src='../assets/add.png' lazy-load='true'></image>
+          </view>
+        </li>
+      </ul>
+    </view>
+  </view>
+</view>

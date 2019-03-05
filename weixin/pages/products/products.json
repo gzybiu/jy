@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "product":"./product/product",
+    "assessment":"./assessment/assessment",
+    "seller":"./seller/seller"
+  }
+}

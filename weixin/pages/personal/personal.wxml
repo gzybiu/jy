@@ -1,0 +1,84 @@
+<!--pages/personal/personal.wxml-->
+<view>
+  <!--个人列表  -->
+  <view class='nav bg-white' >
+    <image src='../assets/tabs/left_icon.png' mode='aspectFit' bindtap='jumpIndex'></image>
+    <view class='nav-title'>个人中心</view> 
+  </view>
+  <!-- 主体内容 -->
+  <view>
+    <!--获取头像信息  -->
+    <view class='personal_message'>
+      <view class='personal_img'>
+        <image src='../assets/products_title.png' ></image>
+      </view>
+      <view>用户名</view>
+    </view>
+    <!--余额  -->
+    <ul class="money">
+      <li>
+        <view>0.00</view>
+        <view>储值余额</view>
+      </li>
+      <li>
+        <view>0.00</view>
+        <view>剩余积分</view>
+      </li>
+    </ul>
+    <!--我的订单 通用箭头  -->
+    <view class='arrow'>
+      <view class='arrow_icon'><image src='../assets/personal/order.png'></image>我的订单</view>
+    </view>
+    <!--待付款、待发货、待收货、售后  -->
+    <ul class='myOrder'>
+      <li>
+        <image src='../assets/personal/waitpay.png'></image>
+        <view>待付款</view>
+      </li>
+      <li>
+        <image src='../assets/personal/wait.png'></image>
+        <view>待发货</view>
+      </li>
+      <li>
+        <image src='../assets/personal/car.png'></image>
+        <view>待收货</view>
+      </li>
+      <li>
+        <image src='../assets/personal/pay.png'></image>
+        <view>售后</view>
+      </li>
+    </ul>
+    <!--分割快  -->
+    <view class='deep'></view>
+    <!--会员卡  通用箭头 -->
+    <view class='arrow'>
+      <view class='arrow_icon'><image src='../assets/personal/vip.png'></image>会员卡</view>
+    </view>
+    <!--优惠券  -->
+    <view class='arrow'>
+      <view class='arrow_icon'><image src='../assets/personal/coupon.png'></image>优惠券</view>
+    </view>  
+    <!--储值金 -->
+    <view class='arrow'>
+      <view class='arrow_icon'><image src='../assets/personal/point.png'></image>储值金</view>
+    </view>
+    <!--积分 -->
+    <view class='arrow'>
+      <view class='arrow_icon'><image src='../assets/personal/core.png'></image>积分</view>
+    </view> 
+    <!--地址管理 -->
+    <view class='arrow'>
+      <view class='arrow_icon'><image src='../assets/personal/addr.png'></image>地址管理</view>
+    </view>
+    <!--购物车 -->
+    <view class='arrow' bindtap='jumpCart'>
+      <view class='arrow_icon'><image src='../assets/tabs/shop_cart.png'></image>购物车</view>
+    </view>  
+    <!-- 小程序管理 -->
+    <view class='arrow' bindtap='jumpIndex'>
+      <view class='arrow_icon'><image src='../assets/personal/home.png'></image>小程序管理</view>
+      <view class='arrow_back'>返回首页</view>
+    </view> 
+  </view>
+  <view class='pao'>泡螺提供技术支持</view>
+</view>

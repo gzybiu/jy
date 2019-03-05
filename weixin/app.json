@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/order/order",
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/product_details/product_details",
+    "pages/search/search",
+    "pages/products/products",
+    "pages/cart/cart",
+    "pages/logs/logs",
+    "pages/address/address"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/assets/tabs/noodles.png",
+        "selectedIconPath": "pages/assets/tabs/noodles_active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "pages/assets/tabs/shop_cart.png",
+        "selectedIconPath": "pages/assets/tabs/shop_cart_active.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "pages/assets/tabs/person.png",
+        "selectedIconPath": "pages/assets/tabs/person_active.png"
+      }
+    ]
+  }
+}

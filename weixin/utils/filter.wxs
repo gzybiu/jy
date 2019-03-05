@@ -1,0 +1,15 @@
+// 保留两位小数
+var moneyFormat=function(money){
+  return money.toFixed(2)
+}
+var dataFormat = function (date) {
+  // console.log(times)
+  var n=date.slice(0,10)
+  return n
+}
+
+// 导出
+module.exports = {
+  moneyFormat:moneyFormat,
+  dataFormat: dataFormat
+}

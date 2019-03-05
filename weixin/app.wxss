@@ -1,0 +1,256 @@
+/**app.wxss**/
+page{
+  color: black;
+  height:100%;
+}
+/* 通用箭头 */
+.arrow{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* 红色 */
+.myRed{
+  color:red;
+}
+
+/* 通用功能一：添加分割快白色 */
+.divider{
+  width: 100%;
+  height: 20rpx;
+  background: #fff;
+}
+/*通用分割快灰色*/
+.deep{
+  width: 100%;
+  height: 20rpx;
+  background: #f8f8f8;
+}
+/*通用功能二： 顶部导航栏 */
+.nav{
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.nav image{
+  width:40rpx;
+  height:35rpx;
+  position: relative;
+  top:30rpx;
+  z-index: 10;
+}
+.nav-title{
+  font-size:16px;
+  color:black;
+  position: relative;
+  top:-18rpx;
+  left:60rpx;
+  z-index: 10;
+}
+.bg-white{
+  background-color: #ffffff;
+}
+.bg-gray{
+  background-color: #f7f7f7;
+}
+.bg-black{
+  background-color: #000;
+}
+
+/*通用功能三： 搜索框 */
+.search_container,.index_container,.index_products{
+  display: flex; 
+  align-items: center;
+    font-size: 14px;
+}
+.search{
+  margin:10px 0 10px 10px;
+  width: 75%;
+  height:65rpx;
+  border:1rpx solid #ddd;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.search icon{
+  margin-left: 10rpx;
+}
+.searchInsert{
+  width: 100%;
+  margin-left:15rpx;
+}
+.searchBtn{
+   width:18%; 
+  height:65rpx;
+  margin-left:10rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 65rpx;
+  font-size: 14px;
+  color:red;
+  border:1rpx solid red;
+}  
+
+
+/* 栅格 */
+.row {
+  display: block;
+  margin: 0px;
+}
+
+.col {
+  display: flex;
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+
+}
+
+.col>.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9,
+.col-10, .col-11, .col-12 {
+  overflow: hidden;
+}
+
+.col-1 {
+  width: 8.33333333333333%;
+}
+
+.col-2 {
+  width: 16.6666666666666%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333333%;
+}
+
+.col-5 {
+  width: 41.6666666666666%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333333333333%;
+}
+
+.col-8 {
+  width: 66.66666666666666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333333333333%;
+}
+
+.col-11 {
+  width: 91.66666666666666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+.x-center {
+  text-align: center;
+}
+
+/*--屏幕背景变暗的背景 */
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+   overflow: hidden; 
+  z-index: 10;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  width: 100%;
+   /* overflow: hidden;  */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  background: #fff;
+  padding-top: 20rpx;
+}
+/*弹出框第一栏  */
+.cart-product{
+  position: relative;
+  border-bottom: 1rpx solid #ddd;
+  padding-bottom: 10rpx;
+  width: 100%;
+  height: 110rpx;
+}
+/*图片  */
+.cart-img {
+  width: 150rpx;
+  height: 150rpx; 
+  position: absolute;
+  top:-46rpx;
+  left:15rpx;
+  border: 1rpx solid seashell;
+}
+.cart-img image{
+  width: 98%;
+  height: 98%;
+}
+/*商品介绍  */
+.cart-detail{
+  margin-left: 170rpx;
+}
+.cart-detail view{
+  margin: 10rpx;
+}
+/*关闭按钮  */
+.cart-product icon{
+  position: absolute;
+  right: 10rpx;
+  top:0rpx;
+}
+/*购买数量  */
+.cart-count{
+  display: flex;
+  width:100%;
+  height:100rpx;
+  line-height: 100rpx;
+  padding-left: 15rpx;
+}
+.cart-count view:first-child{
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.cart-count view .cart-buy{
+  border: none;
+  width: 140rpx;
+}
+.cart-count view text{
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border: 1rpx solid #ddd;
+}
+.cart-count view:last-child{
+  width: 30%;
+  text-align: right;
+}
+/*按钮  */
+.btn{
+  display: flex;
+  width: 100%;
+}

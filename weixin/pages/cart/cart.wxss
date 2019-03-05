@@ -1,0 +1,129 @@
+/* pages/cart/cart.wxss */
+.cart-box{
+    font-size:14px;
+}
+/*空购物车样式  */
+.cart-none{
+  width:100%;
+  font-size:18px;
+  color: #ddd;
+  background: #f8f8f8;
+  text-align: center;
+}
+.shop-cart{
+  width: 100%;
+  padding-top: 150rpx;
+  padding-bottom: 30rpx;
+
+}
+.shop-cart image{
+  width: 280rpx;height: 300rpx;
+}
+.none-content view{
+  padding: 5rpx;
+}
+.none-content+button{
+  margin: 20rpx 0rpx;
+  border-radius: 30rpx;
+   width:260rpx; 
+  height:70rpx;
+  line-height: 70rpx;
+}
+.paoluo{
+  font-size: 13px;
+  height:275rpx;
+}
+
+/*购物车商品样式  */
+.cart-list{
+  padding-top:20rpx;
+  display: flex;
+  width: 100%;
+  background-color: #f8f8f8;
+  flex-wrap: wrap;
+}
+/*选中图标  */
+.cart-icon{
+  width:15%;
+  text-align: center;
+  padding-top: 80rpx;
+}
+/*商品图片  */
+.cart_container{
+  width: 52%;
+  display: flex;
+}
+.cart_container .cart-image{
+  width:50%;
+}
+.cart_container .cart-image image{
+  width:100%;
+  height:200rpx;
+}
+/*商品内容  */
+.cart_container .cart-content{
+  padding-left: 20rpx;
+  width:45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/*加减按钮  */
+.cart-btn{
+  width:29%;
+  text-align: right;
+  padding-top: 150rpx;
+}
+.cart-btn text{
+  display: inline-block;
+  text-align: center;
+  width:40rpx;
+  height: 40rpx;
+  border:1rpx solid #ddd;
+}
+/*底部样式  */
+.cart-footer{
+  width: 100%;
+  height:150rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-top:1rpx solid #ddd;
+}
+/*支撑高度  */
+.paoluo{
+  text-align: center;
+  color: #ddd;
+  padding-top: 20rpx;
+  background-color: #f8f8f8;
+  height:300rpx;
+}
+/*全选按钮  */
+.selectAll,.cart-del{
+  width: 15%;
+  text-align: center;
+}
+.selectAll>view{
+  margin-left: -10rpx;
+}
+
+/* 删除 */
+.cart-del image{
+  width:50rpx;
+  height:50rpx;
+}
+/*合计  */
+.totalPrice{
+  width:30%;
+  text-align: right;
+}
+.totalPrice text{
+  width:150rpx;
+  color:#f00;
+}
+/*结算  */
+.btn{
+  width:23%;
+}

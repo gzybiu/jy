@@ -1,0 +1,104 @@
+/* pages/personal/personal.wxss */
+/*顶部个人信息  */
+page{
+  font-size: 13px;
+}
+image{
+   width: 100%;
+  height: 100%; 
+}
+.personal_message{
+  width: 100%;
+  height: 200rpx;
+  text-align: center;
+}
+/*  */
+.personal_img{
+  margin: 20rpx auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+.personal_img image{
+  border-radius: 50%;
+}
+.personal_img+view{
+  font-size: 16px;
+}
+
+/*余额  */
+.money{
+  border-top: 2rpx solid #ddd;
+  border-bottom: 2rpx solid #ddd;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.money li{
+  width: 50%;
+  border-right: 2rpx solid #ddd;
+}
+.money li:last-child{
+  border:none;
+}
+.money li view{
+  padding: 5rpx;
+}
+/*我的订单 会员卡 等列表样式  */
+.arrow{
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  margin-left: 20rpx;
+  border-bottom:1rpx solid #ddd;
+} 
+.arrow_icon image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 20rpx;
+  vertical-align: text-bottom;
+}
+/*通用箭头  */
+.arrow::after{
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+   margin-right: 30rpx; 
+  border-right:2px solid #ddd;
+  border-top:2px solid #ddd;
+  transform: rotate(45deg)
+}
+/*最后一个小程序管理的样式  */
+.arrow_back{
+  font-size: 9px;
+  color: silver;
+  padding-left:410rpx;
+}
+
+/*中间订单样式  */
+.myOrder{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+}
+.myOrder li{
+  width: 25%;
+  border-bottom: 1px solid #ddd;
+  padding: 20rpx 0;
+}
+.myOrder li image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+}
+/*底部技术支持  */
+.pao{
+  font-size:10px;
+  padding-top: 20rpx;
+  background-color: #f8f8f8;
+  text-align: center;
+  height: 100rpx;
+  color:#ddd;
+}

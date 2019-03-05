@@ -1,0 +1,41 @@
+/* pages/products/product/product.wxss */
+
+.tab-wrapper{
+  display: flex;
+  width: 180rpx;
+  background: #fff;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+
+.tab-top, .tab-bottom,.tab-middle{
+  flex: 1;
+  font-size: 32rpx;
+  color: #000;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 2rpx dashed #ddd;
+
+}
+ .tabbottom{
+  height:2363rpx;
+} 
+
+.tab-active{
+  background-color: #fff;
+  border:none;
+  margin-top:-2rpx;
+}
+.parentContainer{
+  position: relative;
+}
+.content-container{
+  position: absolute;
+  top:0rpx;
+  left:200rpx;
+}
+
+.content-wrapper{
+  width: 100%;
+  flex: 1;
+}

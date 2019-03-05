@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+      "all": "./all/all",
+      "haixian": "./haixian/haixian",
+      "jiancan": "./jiancan/jiancan"
+  }
+}

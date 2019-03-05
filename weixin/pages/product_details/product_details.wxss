@@ -1,0 +1,116 @@
+/* pages/product_details/product_details.wxss */
+.container{
+  font-size: 14px;
+}
+/*商品图片  */
+.header image{
+  width: 100%;
+}
+.main{
+  padding:0rpx 0rpx 20rpx 40rpx;
+}
+.main view{
+  margin: 20rpx 0rpx;
+}
+/*商品详情和评价  */
+.hProduct{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 40rpx;
+}
+
+/*底部样式  */
+.footer{
+  padding-top:200rpx;
+  background-color: #f8f8f8;
+}
+.footer view.row{
+  border-top:1rpx solid #eee;
+}
+.footer ul li{
+  text-align: center;
+    font-size: 12px;
+}
+.footer ul li image{
+  margin-top:15rpx;
+  margin-bottom:-5rpx;
+  width:40rpx;
+  height:40rpx;
+}
+.addBtn,.buyBtn{
+  color: #fff;
+  text-align: center;
+  padding: 30rpx 0; 
+  font-size: 15px;
+  display: inline-block;
+  width: 186rpx;
+}
+.addBtn{
+  background-color: #f60;
+}
+.buyBtn{
+  background-color: #f00;
+}
+
+/*弹框的加购按钮样式  */
+.btnAdd{
+  background-color: #f60;
+  color: #fff;
+  text-align: center; 
+  padding: 20rpx 0; 
+  font-size: 15px;
+}
+
+/*下一步之后弹窗的样式  */
+.commodity_alert_box{
+  position: fixed;
+  top: 40%;
+  left: 12%;
+  width: 550rpx;
+  z-index: 20;
+  color: #fff;
+  font-size: 14px;
+  background-color: #fff;
+}
+/*关闭按钮  */
+.close{
+  float: right;
+  margin-right: 20rpx;
+  margin-top: 5rpx;
+  font-size:20px;
+}
+.alert{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+}
+/*提示框和加购的背景色  */
+.alert,.goCart{
+  background-color: #f00;
+}
+.alert+view{
+  height: 95rpx;
+  line-height: 95rpx;
+  color:#000;
+  padding-left: 20rpx;
+}
+.isGo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx;
+  padding: 10rpx;
+  background-color: #f8f8f8;
+}
+.stay{
+  background-color: #f60;
+}
+.stay,.goCart{
+  width: 250rpx;
+  text-align: center;
+  height: 55rpx;
+  line-height: 55rpx;
+}
+/* .goCart{
+  margin-left: 20rpx;
+} */

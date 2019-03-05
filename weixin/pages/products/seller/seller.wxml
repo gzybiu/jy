@@ -1,0 +1,29 @@
+<!--pages/products/seller/seller.wxml-->
+<view>
+  <view class='cell'>
+    <view class='cell-item'>
+      <view class='cell-view'><image src='../../assets/tabs/address.png'></image></view>
+      <view>地址：中国江苏省南京市秦淮区中华门街道宏光路77号晨光新苑07号楼</view>
+    </view>
+    <view class='cell-item' bindtap='callPhone'>
+      <view class='cell-view'><image src='../../assets/tabs/address.png'></image></view>
+      <view >联系电话：{{phone}}</view> 
+      <view class='cell-right'>
+        <image src='../../assets/tabs/phone.png'></image>
+      </view>
+    </view>
+    <view class='cell-item'>
+      <view class='cell-view'><image src='../../assets/tabs/address.png'></image></view>
+      <view>配送时间：00:00-23:59</view>  
+    </view>
+    <view class='cell-item'>
+      <view class='cell-view'>
+        <image src='../../assets/tabs/address.png'></image>
+      </view>
+      <view>有商家配送提供，约40分钟，配送费￥8.00，配送范围200公里内</view>  
+    </view>
+    <view class='footer'>
+      泡螺提供技术支持
+    </view>
+  </view>
+</view>

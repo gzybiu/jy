@@ -1,0 +1,8 @@
+<!--pages/order/order.wxml-->
+<view>
+  <!--个人列表  -->
+  <view class='nav bg-white' >
+    <image src='../assets/tabs/left_icon.png' mode='aspectFit' bindtap='jumpIndex'></image>
+    <view class='nav-title'>提交订单</view> 
+  </view>
+</view>

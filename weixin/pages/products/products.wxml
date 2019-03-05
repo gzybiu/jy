@@ -1,0 +1,25 @@
+<!--pages/products/products.wxml-->
+
+<view>
+  <view class='nav bg-white' bindtap='jumpBack'>
+    <image  src='../assets/tabs/left_icon.png' mode='aspectFit' bindtap='navBack'></image>
+    <view class='nav-title'>商品列表</view> 
+  </view> 
+  <!-- 正文 -->
+  <view class='container'>
+     <view class='products_title'>
+      <image src='../assets/products_title.png'></image>
+    </view>
+    <!--商品、商家、评价  -->
+    <view class='tab-wrapper'>
+      <view id='tableft' class='tab-left {{currentTab === 0 ? "tab-active":""}}' bindtap='switchTab'>商品</view>
+      <view id='tabmid' class='tab-middle {{currentTab === 1 ? "tab-active" : ""}}' bindtap='switchTab'>评价</view>
+      <view id='tabright' class='tab-right {{currentTab === 2 ? "tab-active" : ""}}' bindtap='switchTab'>商家</view>
+    </view>
+    <view class='content-container bg-gray'>
+      <view class='content-wrapper bg-white' wx:if='{{currentTab === 0}}'><product id="product"></product></view>
+      <view  class='content-wrapper bg-white' wx:if='{{currentTab === 1}}'><assessment id='assessment'></assessment></view>
+      <view class='content-wrapper bg-white' wx:if='{{currentTab === 2}}'><seller/></view>
+    </view>
+  </view>
+</view>

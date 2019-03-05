@@ -1,0 +1,110 @@
+<!--index.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view>
+<!-- 首页 -->
+      <view class='nav bg-white' >
+        <image src='../assets/tabs/left_icon.png' mode='aspectFit' bindtap='navBack'></image>
+        <view class='nav-title'>家.苑</view> 
+   </view>  
+
+      <!-- 正文 -->
+      <view class="container">
+        <!-- 轮播图 -->
+          <view>
+            <swiper autoplay='true' interval='2500' indicator-dots='true' indicator-active-color='lightblue' indicator-color='#fff'>
+              <swiper-item wx:for='{{bannerList}}' wx:key='index'>
+                <image class='pic' src='{{item.img_url}}' lazy-load mode='apspectFill'></image>
+              </swiper-item>
+            </swiper>
+          </view>
+          <!-- 搜索框 -->
+          <form bindsubmit='getKwords'>
+            <view class='search_container'>
+                <view class='search'>
+                  <icon type='search'></icon>
+                  <input class='searchInsert' type='text' placeholder='请输入商品名称' name='kwords' value='{{kwords}}'/> 
+                </view>
+                  <button form-type='submit' class='searchBtn' bindtap='jumpSearch'>搜索</button> 
+            </view>
+          </form>
+          <!-- 3张指示图 -->
+          <ul class='index_container'>
+            <li wx:for='{{indexList}}' wx:key='{{index}}'>
+              <navigator url='/pages/products/products'>
+                <image class='pic' src='{{item.img_url}}' lazy-load mode='apspectFill'></image>
+              </navigator>
+            </li>
+          </ul>
+          <!-- 商品模块 -->
+          <view class='arrow'>
+          <!-- 海鲜 -->
+            <view class='bg'>海鲜</view>
+          </view>
+          <view class='products'>
+            <ul class='index_products'>
+              <li wx:for='{{haixianList}}' wx:key='{{index}}' >
+              <view class='productDetails' data-pid='{{item.pid}}'  bindtap='jumpDetails' >
+                <image src='{{item.img_url}}' lazy-load mode='apspectFill'  ></image>
+                <view>{{item.title}}</view>
+                <view  class='myRed'>￥{{filter.moneyFormat(item.price)}} </view>
+              </view>
+                  <image class='rFloat' src='../assets/tabs/shop_cart_active.png' data-pid='{{item.pid}}' data-title='{{item.title}}' data-price='{{item.price}}' data-url='{{item.img_url}}'  bindtap='addCart'></image>
+              </li>
+            </ul>
+          </view>
+            <view class='arrow'>
+          <!-- 简餐 -->
+            <view class='bg'>简餐</view>
+          </view>
+            <view class='products'>
+              <ul class='index_products'>
+                <li wx:for='{{jiancanList}}' wx:key='{{index}}'>
+                 <view class='productDetails' data-pid='{{item.pid}}'  bindtap='jumpDetails' >
+                  <image src='{{item.img_url}}' lazy-load mode='apspectFill'></image>
+                  <view>{{item.title}}</view>
+                  <view class='myRed'>￥{{filter.moneyFormat( item.price)}}</view>
+                  </view>
+                  <!--  -->
+                    <image class='rFloat' src='../assets/tabs/shop_cart_active.png'  data-pid='{{item.pid}}' data-title='{{item.title}}' data-price='{{item.price}}' data-url='{{item.img_url}}' bindtap='addCart'></image>
+                </li>
+              </ul>
+            </view>
+            <view class='footer'>
+              泡螺提供技术支持
+            </view>
+    <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+      <!--弹出框  -->
+      <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <!--图片和详情   -->
+        <view class='cart-product'>
+          <view class='cart-img'>
+              <image src='{{cartList.url}}'></image>
+          </view>
+          <view class='cart-detail'>
+            <view>{{cartList.title}}</view>
+            <view class='myRed'>￥{{filter.moneyFormat( cartList.price )}}</view>
+          </view>
+          <!--关闭按钮  -->
+          <icon type='cancel' bindtap='hideModal'></icon>
+        </view>
+          <!--购买数量  -->
+          <view class='.cart-count'>
+            <view>
+              <text class='cart-buy'>购买数量:</text>
+              <text bindtap="minusCount" data-index="{{index}}">-</text>
+              <text>{{number}}</text>
+              <text bindtap="addCount" data-index="{{index}}">+</text>
+            </view>
+            <view class='myRed' >剩余：999</view>
+          </view>
+          <view class='btn'>
+            <!--加入购物车  -->
+            <view   class='addBtn' bindtap='addCartDetail'>加入购物车</view>
+            <view  class='buyBtn'>立刻购买</view >
+            <!--立即购买  -->
+            </view>
+          </view>
+      </view>
+  </view> 
+   
